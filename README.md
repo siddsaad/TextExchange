@@ -16,13 +16,17 @@ Github 101
 
 __________
 there's going to be another text file which will act like our backlog
+
 Example:  
 
    TO-DO
   
    homepage html - DONE //Add your name
-   homepage css -  DOING //Add your name
-   registration form - 
-   profile page html 
+  
+  homepage css -  DOING //Add your name
+  
+  registration form - 
+  
+  profile page html 
 
 
