@@ -1,0 +1,108 @@
+
+h1{
+   text-align: center;
+   color: white;
+
+}
+
+body{
+    background-image: url(https://425magazine.com/wp-content/uploads/2016/12/books-bookstore-book-reading-159711-1024x681.jpeg); 
+}
+
+
+label{
+    color: white;
+}
+/* Add a black background color to the top navigation bar */
+.topnav {
+       background-color: gray;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: white;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+    color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: 1px ;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 20%;
+    padding: 6px 10px;
+    margin: 4px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 10px;
+    margin: 4px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    display: inline-block;
+}
+
+button[type=submit2]{
+    display: block;
+}
+
+
+
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+
+/*Side Bar*/
