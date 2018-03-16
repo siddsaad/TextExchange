@@ -3,9 +3,10 @@ Simple website for students to exchange textbook
 
 __________
 Github 101
--this is the repository where we are going to upload all our files
 
--you can edit any file or code by clicking the edit button on the top corner
+-this is the "repository" where we are going to upload all our files
+
+-you can edit any file by clicking the file and then clicking the edit button on the top corner
 
 -after you edit the codes, make sure you document and add comments (or questions but we can do this via Slack)
 
