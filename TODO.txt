@@ -1,0 +1,9 @@
+TO-DO
+
+homepage html -
+homepage css -
+registration form html -
+registration form css -	
+profile page html -
+database setup -
+server setup -
