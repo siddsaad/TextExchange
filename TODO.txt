@@ -1,4 +1,4 @@
-TO-DO
+TO-DO //add as necessary
 
 homepage html -
 homepage css -
@@ -7,3 +7,4 @@ registration form css -
 profile page html -
 database setup -
 server setup -
+link database to server -
