@@ -1,6 +1,7 @@
 # TextExchange
 Simple website for students to exchange textbook
 
+__________
 Github 101
 -this is the repository where we are going to upload all our files
 
@@ -12,13 +13,20 @@ Github 101
 
 -creating a branch is kinda a hassle so you can just go ahead and edit the codes/add files on this master branch if you want
 
+
+__________
 there's going to be another text file which will act like our backlog
 we can list things we have to do 
 Example:  
+
 TODO:
+
 -homepage html - DONE 
+
 -homepage css -DONE
+
 -registration form - DONE
+
 -registration css - DOING
 etc
 
