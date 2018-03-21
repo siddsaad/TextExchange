@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome to Textbook Exchange.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+/* =================Style icon buttons ================*/
+.btn {
+    background-color: white; /* Blue background */
+    border: none; 
+    color: black; 
+    font-size: 25px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: lightgray;
+}
+
+/*=============Login Form====================*/
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 30%;
+    top: 0;
+    width: 50%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>TE.com</b></h3>
+  </div>
+  
+    <script type="text/javascript">
+function getCheckedCheckboxesFor(checkboxName) {
+    var checkboxes = document.querySelectorAll('input[name="' + checkboxName + '"]:checked'), values = [];
+    Array.prototype.forEach.call(checkboxes, function(el) {
+        values.push(el.value);
+    });
+    return values;
+}
+</script>
+
+<div class="data">    
+   
+	<h4 class="w3-wide"><b>Subject</b></h3>
+
+    <span>
+    <input name="subject" type="checkbox" value="biology"/>
+    <label for="subject">Biology</label><br>
+    </span>    
+
+    <span>
+    <input name="subject" type="checkbox" value="chemistry"/>
+    <label for="subject">Chemistry</label><br>
+    </span>
+    
+     <span>
+    <input name="subject" type="checkbox" value="english"/>
+    <label for="subject">English</label><br>
+    </span>
+    
+    <span>
+    <input name="subject" type="checkbox" value="history"/>
+    <label for="subject">History</label><br>
+    </span>
+    
+     <span>
+    <input name="subject" type="checkbox" value="law"/>
+    <label for="subject">Law</label><br>
+    </span>
+    
+    <span>
+    <input name="subject" type="checkbox" value="math"/>
+    <label for="subject">Math</label><br>
+    </span>
+    
+    <span>
+    <input name="subject" type="checkbox" value="physics"/>
+    <label for="subject">Physics</label><br><br>
+    </span>
+    
+     <input type="button" onclick="alert(getCheckedCheckboxesFor('subject'));" value="Search" />
+     
+     <h4 class="w3-wide"><b>Price Range</b></h3>
+
+    <span>
+    <input name="price" type="checkbox" value="0-15"/>
+    <label for="price">$0.00 ~ 15.00</label><br>
+    </span>
+    
+    <span>
+    <input name="price" type="checkbox" value="15-30"/>
+    <label for="price">$15.00 ~ 30.00</label><br>
+    </span>
+    
+    <span>
+    <input name="price" type="checkbox" value="30-50"/>
+    <label for="price">$30.00 ~ 50.00</label><br>
+    </span>
+    
+    <span>
+    <input name="price" type="checkbox" value="50-70"/>
+    <label for="price">$50.00 ~ 70.00</label><br>
+    </span>
+    
+    <span>
+    <input name="price" type="checkbox" value="70-90"/>
+    <label for="price">$70.00 ~ 90.00</label><br>
+    </span>
+    
+    <span>
+    <input name="price" type="checkbox" value="90-110"/>
+    <label for="price">$90.00 ~ 110.00</label><br><br>
+    </span>
+    
+    <input type="button" onclick="alert(getCheckedCheckboxesFor('price'));" value="Search" /><br>
+    </div>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header & Icons -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">Textbook Exchange</p>
+    <p class="w3-right">
+      <button class="btn"><i class="fa fa-search"></i></button>
+      <button class="btn"><i class="fa fa-shopping-cart w3-margin-right"></i></button>
+      <button class="btn" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i></button>
+     </p>
+     <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="user.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="register">Not A Member? <a href="Registration Forms.html"><b>Register</b></a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+    
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="book.jpg" alt="book" style="width:100%">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">We Know What You Need</h1>
+      <h1 class="w3-hide-small">Over 1000+ Users are using TE.com</h1>
+      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p>8 items</p>
+  </div>
+
+  <!-- Product grid -->
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="criminal law.jpg" style="width:100%">
+        <p><a href="law.html">Criminal Law</a><br><b>$14.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="chemistry.jpg" style="width:100%">
+        <p><a href="chem.html">Chemistry</a><br><b>$39.99</b></p>
+      </div>
+    </div>
+    
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="biology.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+        </div>
+        <p><a href="biology.html">Biology</a><br><b>$45.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="literature.jpg" style="width:100%">
+        <p><a href="literature.html">Literature</a><br><b>$12.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="history.jpg" style="width:100%">
+        <p><a href="history.html">World History</a><br><b>$20.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="calculus.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+        </div>
+        <p><a href="calculus.html">Calculus</a><br><b>$24.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="psychology.jpg" style="width:100%">
+        <p><a href="psychology.html">Psychology</a><br><b>$24.99</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="physics.jpg" style="width:100%">
+        <p><a href="physics.html">Physics</a><br><b>$34.99</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+// Accordion 
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
