@@ -7,68 +7,65 @@
 
 	<h1><strong>Register</strong></h1>
 
-	<form>
-		<label for="First">First Name: </label>
-		<input name="First" id="First" type="text" placeholder="John" required="">
-		<label for="Last">Last Name: </label>
-		<input name="Last" id="Last" type="text" placeholder="Smith" required>
-		
-		<div>
-			<label for="Male">Male</label>
-			<input name="Gender" id="Male" type="radio" value="MALE">
+	<form method="POST" action="register.php">
 
-			<label for="Female">Female</label>
-			<input name="Gender" id="Female" type="radio" value="FEMALE">
-
-			<label for="Other">Other</label>
-			<input name="Gender" id="Other" type="radio" value="OTHER">
-		</div>
-
-		<div>
-			<label for="Email">Email: </label>
-			<input name="Email" type="Email" placeholder="your email" required>
-
-			<label for="password">Password:</label>
-			<input name="password" type="password" placeholder="your password" pattern=".{5,10}" required title="5 to 10 characters">
+	<label for="id">Username: </label>
+	<input type="text" name="T1" placeholder="johnsmith123"/>
+	<br>
+	<label for="First">First Name: </label>
+	<input type="text" name="T2" placeholder="First Name" /> 
+	<br>
+	<label for="Last">Last Name: </label>
+	<input type="text" name="T3" placeholder="Last Name" />
+	<br>
+	<label for="Email">Email: </label>
+	<input type="text" name="T4" placeholder="john123@gmail.com"/>
+	<br>
+	<label for="Phone">Phone Number: </label>
+	<input type="text" name="T5" placeholder="408-123-4567"/>
+	<br>
+	<label for="password">Password:</label>
+	<input type="text" name="T6" placeholder="Password" pattern=".{5,10}" required title="5 to 10 characters"/>
+	<br> 
 	
-		</div>
-
-		<div>
-			<label>Birthday: 
-				<select name="Month"  >
-					<option>Month</option>
-					<option>January</option>
-					<option>Febuary</option>
-					<option>March</option>
-				</select>
+	<div>
+		<input name="T7" id="Male" type="radio" value="MALE">
+		<label for="Male">Male</label>
+		
+		<input name="T7" id="Female" type="radio" value="FEMALE">
+		<label for="Female">Female</label>
+		
+		<input name="T7" id="Other" type="radio" value="OTHER">
+		<label for="Other">Other</label>
+	</div>
+	
+	<div>
+		<label>Birthday: 
+			<select name="T8" id="Month"  >
+				<option>Month</option>
+				<option>January</option>
+				<option>Febuary</option>
+				<option>March</option>
+			</select>
 			
-				<select name="Day" >
-					<option>Day</option>
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-				</select>
+			<select name="T9" id="Day" >
+				<option>Day</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
 			
-				<select name="Year" >
-					<option>Year</option>
-					<option>2018</option>
-					<option>2017</option>
-					<option>2016</option>
-				</select>
+			<select name="T10" id="Year" >
+				<option>Year</option>
+				<option>2018</option>
+				<option>2017</option>
+				<option>2016</option>
+			</select>
+		</label>
+	</div>
 
-			</label>
-
-		</div>
-
-		<label for="agreed">I agree to the terms and conditions</label>
-		<input id = "agreed" name="agreed" type="checkbox" required>
-
-		<div>
-			<button>submit</button>
-		</div>
-	</form>
-
-
+	<input type="submit" name="submit" value="Submit"/>
+</form> 
 
 
 
