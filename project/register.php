@@ -1,7 +1,6 @@
 <?php
 
 $id=$_POST["T1"];
-
 $firstname=$_POST["T2"];
 
 $lastname=$_POST["T3"];
@@ -12,30 +11,35 @@ $phone=$_POST["T5"];
 
 $pw=$_POST["T6"];
 
-$gender=$_POST["T7"];
+$conn = new mysqli("localhost","root","root","Textbook_Exchange");
 
-$birthmonth=$POST["T8"];
+if($conn->connect_error)
+{
+	die("Fail to Connect Database: ". $conn->connect_error);
+}
 
-$birthdate=$POST["T9"];
+echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;//Feel free to delete this line, after testing.
 
-$birthyear=$POST["T10"];
 
-$link=mysql_connect("localhost","root","1234") or die("Fail to Connect Database!");
 
-print "Connent Successfully!";//Feel free to delete this line, after testing.
+//mysql_query("SET NAMES utf8");
 
-mysql_select_db("db1");
+$sqlStr="insert into Account (Username,FirstName,LastName,Email,PhoneNum,Password) ";
 
-mysql_query("SET NAMES utf8");
+$sqlStr.="values('$id','$firstname','$lastname','$email',$phone,'$pw')";
 
-$sqlStr="insert into tb1 (id,firstname,lastname,email,phone,pw,gender,birthmonth,birthdate,birthyear) ";
+//echo $sqlStr."<br>";
 
-$sqlStr.="values('$id','$firstname','$lastname','$email','$phone','$pw','$gender','$birthmonth','$birthdate','$birthyear')";
+if($conn->query($sqlStr) === TRUE)
+{
+	printf("success!");
+}
+else
+{
+	echo "Error: ". $sqlStr . "<br>" . $conn->error;
+}
 
-echo $sqlStr."<br>";
-
-mysql_query($sqlStr) or die("Fail to input!");
-
-echo "Input Successfully!";
+//echo "Input Successfully!";
 
 ?>
+
