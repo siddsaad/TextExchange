@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="homeDesign.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="header">
+	  <p style="font-size: 40px;">Textbook Exchange
+    <button class="iconbutton"><i class="fa fa-shopping-cart"></i></button>
+	<button  class="iconbutton" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i></button>
+</p>
+
+</div>
+
+
+
+<div class="creditCardForm">
+    <div class="heading">
+        <h1>Confirm Purchase</h1>
+    </div>
+    <div class="payment">
+        <form>
+            <div class="form-group owner">
+                <label for="owner">Name</label>
+                <input type="text" class="form-control" id="owner">
+            </div>
+            <div class="form-group CVV">
+                <label for="cvv">CVV</label>
+                <input type="text" class="form-control" id="cvv">
+            </div>
+            <div class="form-group" id="card-number-field">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber">
+            </div>
+            <div class="form-group" id="expiration-date">
+                <label>Expiration Date</label>
+                <select>
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select>
+                   
+                    <option value="17"> 2017</option>
+                    <option value="18"> 2018</option>
+                    <option value="19"> 2019</option>
+                    <option value="20"> 2020</option>
+                    <option value="21"> 2021</option>
+                    <option value="16"> 2022</option>
+                </select>
+            </div>
+           
+            <div class="form-group" id="pay-now">
+                <button type="submit" class="btn btn-default" id="confirm-purchase">Checkout</button>
+            </div>
+        </form>
+    </div>
+</div>
+	
+
+
+
+	<div class ="footer" style=" text-align: right">
+		<p>About us</p>
+		<p>Contact Us</p> 
+		<p>Shipping & Return</p>
+	</div>
+</body>
+</head>
+</html>
